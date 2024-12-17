@@ -77,14 +77,14 @@
 (2) 데이터를 기반으로 하여 추천 게임 3가지가 목록으로 작성되고 시각화를 위해 표 또한 생성됩니다.
 ![image](https://github.com/user-attachments/assets/c00d3264-e69a-4505-8374-dc92be942823)
 
-(3) 각 추천 게임에 대한 만족도를 입력합니다.
+(3) 각 추천 게임에 대한 만족도를 입력합니다. 아래 첨부된 사진은 만족도가 5인 게임이 존재하지 않는 경우이므로, (4)번 과정으로 넘어갑니다. 만약, 최초 만족도를 입력하는 과정에서 5인 게임이 존재한다면, (6)번 과정으로 넘어갑니다.
 ![image](https://github.com/user-attachments/assets/2cc06393-cb54-48cf-9dc1-044a214b1fbe)
 
-(4) 만족도가 5인 게임이 존재하지 않는다면, 입력한 만족도를 기반으로 하여 사용자의 성향을 업데이트합니다.
-![image](https://github.com/user-attachments/assets/4c0d3b2a-0af2-4426-aa99-cb9da6bdbda4)
-
-(5) 조정된 성향을 기반으로 하여 다시 3가지 게임을 추천하고 이 또한 시각화를 위해 표가 생성됩니다.
+(4) 만족도가 5인 게임이 존재하지 않으므로, 성향이 업데이트됩니다. 조정된 성향을 기반으로 하여 다시 3가지 게임을 추천하고 이 또한 시각화를 위해 표가 생성됩니다.
 ![image](https://github.com/user-attachments/assets/8079cd0f-d18b-4462-ac0c-17e6bbf3c85a)
+
+(5) 만족도가 5인 게임이 존재하지 않는다면, 입력한 만족도를 기반으로 하여 사용자의 성향을 업데이트합니다.
+![image](https://github.com/user-attachments/assets/4c0d3b2a-0af2-4426-aa99-cb9da6bdbda4)
 
 (6) 추천받은 게임에 대하여 만족도가 5로 입력되면 추천 프로그램이 종료됩니다.
 ![image](https://github.com/user-attachments/assets/4f21667f-c3b6-4eb1-960c-cce12db7a6a7)
