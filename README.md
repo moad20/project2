@@ -17,7 +17,8 @@
 ### (1) 퍼펙트 넘버
 <br>
 '퍼펙트 넘버'는 특정 문장이 참이 되도록 빈칸에 알맞는 숫자를 넣는 게임입니다. 아래 사진이 바로 예시 문장입니다. 이 게임은 조건에 맞도록 오류를 제거하는 추론 능력을 요구합니다.
-![image](https://github.com/user-attachments/assets/80263c62-a8fe-4172-85c9-d19f5200a9bd)
+![image](https://github.com/user-attachments/assets/3612cc37-67b2-4a4f-977d-980dc563a444)
+
 
 # 코드 설명
 
