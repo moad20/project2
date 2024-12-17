@@ -46,55 +46,39 @@
 
 코드 설명을 진행하기 이전에 각 게임의 특징(수리능력, 기억력, 창의력, 논리력, 제한 시간, 패턴 인식 능력)은 1부터 5까지의 스케일 중 상대적 비교를 통해 입력하였음을 알려드립니다. 알고리즘 코드를 작성하는 데에 있어서 각 게임의 정보가 필요하기 때문에 위 과정을 선행하였습니다.
 
-1. Class 정의 및 Class 내 함수 설명
-   
-  - __init__(self, name, chips) : 플레이어의 이름과 칩 수를 초기화하고, 볼 수 있는 카드와 볼 수 없는 카드, 그리고 배팅 금액을 초기화합니다.
-  ![init함수](https://github.com/moad20/project/assets/163985965/87d40a9f-7b22-415e-a097-53d715da3e25)
+1. 선행 라이브러리 설명
 
-  - place_bet(self) : 플레이어가 칩을 배팅합니다. 배팅 금액이 올바른 범위 내에 있는지 확인하고, 칩을 차감합니다.
-  ![place_bet 함수](https://github.com/moad20/project/assets/163985965/242685e9-85ce-45e8-9019-a51c8361d829)
+이 프로젝트는 데이터 포인트의 가장 가까운 이웃들을 기반으로 예측하는 거리 기반 알고리즘인 KNN을 사용합니다. 일반적인, 딥러닝 모델로 알려진 CNN과는 확연한 차이를 보입니다. 주로 이미지 혹은 비정형 데이터를 처리하는데는 CNN이 유리한 반면, 거리를 기반으로 하는 Classification과 Regression 문제에는 KNN이 더 유리합니다. 해당 프로젝트는 사용자의 성향이라는 데이터들을 입력받아서 가장 최적화된 솔루션을 도출해내는 관점으로 볼 수 있으므로, 학습이 선행되지 않아도 되기 때문에 계산량이 적을 지 몰라도, 데이터를 입력 받은 후에는 오히려 계산량이 더 많아진다는 것을 알 수 있습니다. 따라서, 이를 구현하기 위해 다양한 라이브러리들을 import문으로 불러온 뒤, 본격적인 코드를 시작하였습니다. 주석에 보다 자세한 설명을 작성해넣었습니다.
+![image](https://github.com/user-attachments/assets/7e4b8fa6-2502-4ff9-b84d-4287e9f5dca1)
 
-  - receive_cards(self, visible_card, hidden_card) : 플레이어가 두 장의 카드를 받습니다. 한 장은 볼 수 있고, 다른 한 장은 볼 수 없습니다.
-![receive_cards 함수](https://github.com/moad20/project/assets/163985965/67772d7d-64d2-4f1d-b51d-6cd3675583bd)
 
-  - reveal_cards(self) : 플레이어의 카드를 공개합니다.
-![reveal_cards 함수](https://github.com/moad20/project/assets/163985965/ca859344-a6b8-435d-a38f-71049f91e274)
+2. 사전 준비 코드에 대한 설명
 
-  - total_card_value(self) : 플레이어의 두 카드 값을 합산하여 반환합니다.
-    ![total_card_value 함수](https://github.com/moad20/project/assets/163985965/6d6ea470-e807-4900-a3fd-21cf738a324f)
+  - 게임 데이터 준비
+  ![image](https://github.com/user-attachments/assets/d2c785b0-da79-4226-9d74-af15f8d554a8)
 
-<br>
-2. 메인 함수를 위한 함수 설명
+  - 사용자 성향 입력 함수
+  ![image](https://github.com/user-attachments/assets/b0a141a5-ed17-4536-b4f9-e2b56b59860a)
 
-  - deal_cards(deck, players) : 덱을 섞고 각 플레이어에게 두 장의 카드를 나눠줍니다.
-  ![deal_cards 함수](https://github.com/moad20/project/assets/163985965/6b4d15f4-90c9-4748-a4e6-31002faf8962)
+  - KNN 모델 준비 및 적용
+  ![image](https://github.com/user-attachments/assets/46eee285-28d3-4932-86a6-fe93e1d1d3a6)
 
-  - determine_winner(players) : 플레이어들의 카드 합산 값을 비교하여 승자를 결정합니다.
-  ![determine_winner 함수](https://github.com/moad20/project/assets/163985965/333beb85-7188-430a-ac6c-9f8b6b1f8394)
+  - 사용자 성향을 기반으로 게임 추천해주는 함수
+  ![image](https://github.com/user-attachments/assets/7162045d-d3be-47e7-9fee-bdf4530824d9)
 
-  - display_game_state(players, round_number) : 현재 게임 상태를 표로 출력합니다. 각 플레이어의 이름, 칩 수, 배팅 금액, 볼 수 있는 카드, 볼 수 없는 카드 상태
-  ![display_game_state 함수](https://github.com/moad20/project/assets/163985965/97e03a81-6bf3-4569-896c-eb2c327376a9)
+   - 피드백 수집 함수
+   ![image](https://github.com/user-attachments/assets/b145a208-3e9d-4da7-a774-bca5b7bc1737)
 
-  - reveal_other_players_visible_cards(players, current_player) : 현재 플레이어가 다른 플레이어들의 볼 수 있는 카드를 볼 수 있도록 합니다.
-    ![reveal_other_players_visible_cards 함수](https://github.com/moad20/project/assets/163985965/6d8fe310-63e1-409f-8917-19fbc8c87f9b)
+   - 피드백을 통한 사용자 성향 조정 함수
+   ![image](https://github.com/user-attachments/assets/3db22bbb-5639-4812-80af-3bc40eb54e79)
+
 
 <br>
 3. 메인 함수 설명
   
-  - main( ) : 1부터 13까지 카드 덱 4세트를 생성하고, 플레이어 수를 입력받아 최소 2명 이상이 게임에 참여하도록 합니다. 해당 카드 덱을 생성할 때, 실제 카드처럼 문양은 고려하지 않았습니다.
-  ![main1](https://github.com/moad20/project/assets/163985965/919e1678-9290-486c-af36-ea1338075480)
+   - 이제 본격적으로 메인 함수를 실행 시킵니다. 가장 먼저, 사용자의 성향을 입력받아야 합니다. 이후, 추후 사용될 '제외 게임 목록'에 대한 집합을 먼저 만들어줍니다. 여기서부터는 사용자의 피드백에서 만족도가 5가 나와야지만 추천 프로그램이 종료됩니다. 현 상황에서는 게임이 9가지밖에 존재하지 않고, 앞서 최우선순위에 있는 게임 3개씩 표에 도출되어 추천하도록 프로그램이 설명되어있어서 단순하다고 생각될 수 있지만, 해당 프로그램이 더 확장되어서 게임의 가짓수가 정말 많아진다면, 이 과정은 더 유의미해질 것으로 예상됩니다. While문이 사용하였기 때문에, 머신러닝을 통해서 추천 게임 목록이 형성되고 이를 표로 시각화하여 도출합니다. 이후, 피드백을 수집하고 만족도가 5로 입력되지 않는다면, 추천된 게임을 제외한 나머지 게임들에서 이 과정을 반복하여 진행합니다. 해당 과정을 진행 할 때는 피드백을 통해서 성향을 재조정하여 추천 알고리즘에 적용되어 결과가 도출됩니다.
+   ![image](https://github.com/user-attachments/assets/6023bcc2-c772-4119-ad2a-c94d22303ce9)
 
-  - 플레이어 객체를 생성하고 초기 칩 수를 100으로 설정하는 코드입니다. 이와 동시에, 최초의 라운드 번호를 1로 지정하는 코드도 추가하였습니다.
-    ![player](https://github.com/moad20/project/assets/163985965/961ee438-d3e9-491b-a601-cec0b4d0b0ef)
-
-  - while문을 이용하여 게임을 진행하였습니다. 이때, 모든 플레이어가 칩을 가지고 있는 동안 게임을 진행하고 한 명의 플레이어라도 칩 수가 0이 되면, 게임 룰에 적혀있는 것처럼 게임을 종료합니다. 앞서 만들어낸 함수를 통해 카드를 분배하고 현재 상태를 알려주는 테이블이 보여지게 만듭니다. 이후, 특정 명령어를 입력하면, 다른 플레이어들의 hidden card를 볼 수 있게 한 뒤, 해당 과정이 종료되면 배팅을 시작합니다. 각 배팅이 끝나면, 즉각적으로 배팅 후 상태를 표시해주는 테이블이 다시 보여지게 만듭니다. 이후 과정은 간단합니다. 카드를 공개한 뒤, 승자가 정해지고 해당 라운드 승자가 모든 배팅 금액을 가져갑니다. 이러한 과정을 모두 마치면, 라운드 넘버가 1씩 올라가고 이를 게임 규칙에 따라, 한 명의 플레이어라도 칩 수가 0이 될 때까지 게임을 반복합니다.
-  ![while2](https://github.com/moad20/project/assets/163985965/538af4da-fae9-4349-bf6a-44dd1e6f3e19)
-
-  - 승자 리스트에 존재하는 최종 승자를 도출해내는 코드로 메인 함수를 마무리합니다.
-  ![main last](https://github.com/moad20/project/assets/163985965/7c2277e6-e09f-40de-9193-024ebbf20d70)
-
-  - main함수를 실행시키면 게임을 시작합니다.
-  ![main last](https://github.com/moad20/project/assets/163985965/559c288a-1e90-4279-8a7b-71673d8191c5)
 
 # 실행 결과
 
