@@ -83,7 +83,7 @@
 # 실행 결과
 
 1. 사용자의 성향을 각 항목마다 입력합니다.
-![image](https://github.com/user-attachments/assets/f3efebc0-3df2-4e95-8518-7bcc74721f77)
+![image](https://github.com/user-attachments/assets/81bc8d93-f82d-4635-9c8c-7be01c5b728e)
 
 2. 모두 입력하면, 이들을 데이터로 받아서 KNN 과정을 거쳐 추천 게임이 3개씩 표로 도출됩니다.
 ![image](https://github.com/user-attachments/assets/a0702217-58e8-4010-a99a-43ef0738797c)
