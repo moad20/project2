@@ -82,24 +82,23 @@
 
 # 실행 결과
 
-1. 플레이어의 인원수를 설정하고 현재 상황을 보여주는 테이블을 도출합니다.
-![1](https://github.com/moad20/project/assets/163985965/79dce09f-cc7a-4416-8bfc-0c9ba5b78b72)
+1. 사용자의 성향을 각 항목마다 입력합니다.
+![image](https://github.com/user-attachments/assets/f3efebc0-3df2-4e95-8518-7bcc74721f77)
 
-2. r키를 눌러 각각 상대방의 visible card를 확인합니다.
-![2](https://github.com/moad20/project/assets/163985965/051e674e-5860-423f-8b06-63393fb8c114)
+2. 모두 입력하면, 이들을 데이터로 받아서 KNN 과정을 거쳐 추천 게임이 3개씩 표로 도출됩니다.
+![image](https://github.com/user-attachments/assets/a0702217-58e8-4010-a99a-43ef0738797c)
 
-3. 모든 플레이어가 배팅을 한 뒤, 라운드의 승자가 누구인지 알려주는 결과를 테이블로 도출합니다.
-![3](https://github.com/moad20/project/assets/163985965/34b0bcd6-d4c3-4672-8569-24c1062a96ea)
+3. 추천해준 게임들에 대해서 만족도를 입력받습니다. 3개의 게임 중 만족도가 5인 게임이 1개도 존재하지 않으면 5번과정으로 넘어가고, 만족도가 5인 게임이 존재하면 바로 6번 과정으로 넘어갑니다.
+![image](https://github.com/user-attachments/assets/b9ffd186-1e3b-4d9c-ac05-b67260167c23)
 
-4. 이후, 바뀐 보유 배팅 금액을 기반으로 한 현 상황 테이블을 불러옵니다.
-![4](https://github.com/moad20/project/assets/163985965/01f7b81d-7df7-4403-8a6e-da1345b27db1)
+4. 입력받은 만족도에 따라서 사용자의 성향이 업데이트 됩니다.
+![image](https://github.com/user-attachments/assets/28d7285e-2283-4a6a-8e6b-a0e504b056c1)
 
-5. 게임이 종료될 때까지, 라운드를 반복해서 진행합니다.
-![5](https://github.com/moad20/project/assets/163985965/38d96bc8-ccf1-42d8-9ed7-9f3dae19cda9)
+5. 조정된 성향을 기반으로 하여, 다시 게임을 3가지 추천하고 이를 표로 시각화합니다.
+![image](https://github.com/user-attachments/assets/f623bce7-3b89-4659-b367-6bf9de2aeda2)
 
-6. 게임의 최종 단계 모습은 다음과 같습니다.
-![6](https://github.com/moad20/project/assets/163985965/6eb1ed75-a17d-44af-9667-12518f96c358)
-![7](https://github.com/moad20/project/assets/163985965/6fbdf627-5daf-4d61-8c90-9713941cda89)
+6. 만족도 5인 게임이 존재 시, 추천 프로그램이 종료됩니다.
+![image](https://github.com/user-attachments/assets/20c0bae2-48eb-4f77-a58e-ef72e2d79512)
 
 # 피드백
 ####
