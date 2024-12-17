@@ -66,11 +66,11 @@
   - 사용자 성향을 기반으로 게임 추천해주는 함수
   ![image](https://github.com/user-attachments/assets/7162045d-d3be-47e7-9fee-bdf4530824d9)
 
-   - 피드백 수집 함수
-   ![image](https://github.com/user-attachments/assets/b145a208-3e9d-4da7-a774-bca5b7bc1737)
+  - 피드백 수집 함수
+  ![image](https://github.com/user-attachments/assets/b145a208-3e9d-4da7-a774-bca5b7bc1737)
 
-   - 피드백을 통한 사용자 성향 조정 함수
-   ![image](https://github.com/user-attachments/assets/3db22bbb-5639-4812-80af-3bc40eb54e79)
+  - 피드백을 통한 사용자 성향 조정 함수
+  ![image](https://github.com/user-attachments/assets/3db22bbb-5639-4812-80af-3bc40eb54e79)
 
 
 <br>
